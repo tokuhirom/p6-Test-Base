@@ -16,8 +16,7 @@ subtest {
     ok $got;
     is-deeply $got.made, [
         Test::Base::Block.new(
-            title => "hogehoge",
-            data => {:ONLY(""), :expected("yyy\n"), :input("xxx\n")}
+            "hogehoge", {:ONLY(""), :expected("yyy\n"), :input("xxx\n")}
         )
     ];
 }, 'simple';
@@ -38,7 +37,9 @@ subtest {
 
     ok $got;
     is-deeply $got.made, [
-        Test::Base::Block.new(title => "foo", data => {:expected("zzz"), :input("yyy")}),
-        Test::Base::Block.new(title => "bar", data => {:expected("ppp\n"), :input("xxx\n")})
+        Test::Base::Block.new("foo", {:expected("zzz"), :input("yyy")}),
+        Test::Base::Block.new("bar", {:expected("ppp\n"), :input("xxx\n")})
     ];
 }, 'multi';
+
+done-testing;
