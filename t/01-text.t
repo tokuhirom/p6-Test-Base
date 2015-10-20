@@ -42,4 +42,18 @@ subtest {
     ];
 }, 'multi';
 
+subtest {
+    my $got = Test::Base::Grammar.parse(q:to/EOD/, :actions(Test::Base::Actions));
+
+    ===
+    --- input: yyy
+    --- expected: zzz
+    EOD
+
+    ok $got;
+    is-deeply $got.made, [
+        Test::Base::Block.new("", {:expected("zzz"), :input("yyy")}),
+    ];
+}, 'no title';
+
 done-testing;

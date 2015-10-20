@@ -11,7 +11,7 @@ token block-delim { '===' }
 token data-delim { '---' }
 
 token block {
-    <.block-delim> \s* <title> \n
+    <.block-delim> ' '* <title> \n
     <data>*
 }
 
