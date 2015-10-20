@@ -1,6 +1,6 @@
 {
   "name" : "Test::Base",
-  "source-url" : "",
+  "source-url" : "git://github.com/tokuhirom/p6-Test-Base.git",
   "perl" : "v6",
   "build-depends" : [ ],
   "provides" : {

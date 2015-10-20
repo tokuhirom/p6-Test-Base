@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/tokuhirom/p6-Test-Base.svg?branch=master)](https://travis-ci.org/tokuhirom/p6-Test-Base)
+
 NAME
 ====
 
@@ -6,26 +8,26 @@ Test::Base - Data driven development for Perl6
 SYNOPSIS
 ========
 
-    #   use v6;
-    #   use Test;
+        use v6;
+        use Test;
 
-    #   use Test::Base;
+        use Test::Base;
 
-    #   for blocks($=finish) {
-    #       is EVAL($_<input>), .expected;
-    #   }
+        for blocks($=finish) {
+            is EVAL($_<input>), .expected;
+        }
 
-    #   done-testing;
+        done-testing;
 
-    #   =finish
+        =finish
 
-    #   === simple
-    #   --- input: 3+2
-    #   --- expected: 5
+        === simple
+        --- input: 3+2
+        --- expected: 5
 
-    #   === more
-    #   --- input: 4+2
-    #   --- expected: 6
+        === more
+        --- input: 4+2
+        --- expected: 6
 
 DESCRIPTION
 ===========

@@ -28,26 +28,30 @@ Test::Base - Data driven development for Perl6
 
 =head1 SYNOPSIS
 
-    #   use v6;
-    #   use Test;
+=begin code
 
-    #   use Test::Base;
+    use v6;
+    use Test;
 
-    #   for blocks($=finish) {
-    #       is EVAL($_<input>), .expected;
-    #   }
+    use Test::Base;
 
-    #   done-testing;
+    for blocks($=finish) {
+        is EVAL($_<input>), .expected;
+    }
 
-    #   =finish
+    done-testing;
 
-    #   === simple
-    #   --- input: 3+2
-    #   --- expected: 5
+    =finish
 
-    #   === more
-    #   --- input: 4+2
-    #   --- expected: 6
+    === simple
+    --- input: 3+2
+    --- expected: 5
+
+    === more
+    --- input: 4+2
+    --- expected: 6
+
+=end code
 
 =head1 DESCRIPTION
 
