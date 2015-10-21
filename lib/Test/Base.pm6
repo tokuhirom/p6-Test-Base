@@ -4,6 +4,10 @@ unit class Test::Base;
 use Test::Base::Actions;
 use Test::Base::Grammar;
 
+multi sub blocks() is export {
+    blocks(CALLER::UNIT::<$=finish>);
+}
+
 multi sub blocks(Str $src) is export {
     my $got = Test::Base::Grammar.parse($src, :actions(Test::Base::Actions));
     if $got {
