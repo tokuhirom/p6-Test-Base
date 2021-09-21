@@ -24,7 +24,6 @@ method AT-KEY(Str $key) {
 }
 
 method FALLBACK($name) {
-    ::?CLASS.^add_method($name, method () { $!data{$name} });
     return $!data{$name};
 }
 
